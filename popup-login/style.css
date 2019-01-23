@@ -1,4 +1,6 @@
-* {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
 }
@@ -319,4 +321,50 @@ h5 {
 
 .signin:hover {
     color: #0798e0;
+}
+
+/* MEDIAS */
+@media only screen and (max-width: 37.5em) {
+    html {
+        font-size: 43.75%; /* font-size: 7px */
+    }
+
+    .btn-main {
+        padding: 1.5rem 5.5rem;
+    }
+
+    .content {
+        height: 52rem;
+        width: 37.5rem;
+    }
+
+    .top-content-left {
+        margin-left: 1.5rem;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .top-content-right {
+        margin-right: 1.5rem;
+    }
+
+    .garden {
+        height: 15rem;
+        width: 15rem;
+    }
+
+    .mid {
+        padding: 2rem;
+    }
+
+    .btn-signup {
+        padding: 1rem;
+    }
+
+    .google {
+        padding: 0;
+        margin-right: 2rem;
+    }
 }
