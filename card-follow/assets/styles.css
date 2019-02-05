@@ -1,0 +1,155 @@
+/* Project name: Dribble Challenges
+   Author: José Dutra
+   Date: 4th Feb 2019
+*/
+
+/* custom variables to easy manipulate in JS and DOM */
+:root {
+  /* COLORS */
+  --background-color-0: #020024;
+  --background-color-1: #42475f;
+  --background-color-2: #20253c;
+  --background-card-color: #e8eff3;
+  --button-color: #de623c;
+  --button-shadow: #da461a;
+  --text-bold-color: #78787a;
+  --text-thin-color: #bec1c4;
+  --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: radial-gradient(
+    var(--background-color-2) 0%,
+    var(--background-color-1) 30%,
+    var(--background-color-0) 95%
+  );
+  background-repeat: no-repeat;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px 30px;
+  align-self: center;
+  height: 60vh;
+  width: 40%;
+  background: var(--background-card-color);
+  border-radius: 30px;
+  box-shadow: var(--shadow-dark);
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: var(--button-color);
+}
+
+a.x {
+  padding: 1px 5px;
+  align-self: flex-end;
+  display: inline;
+  font-size: 14px;
+  border: 2px solid var(--button-color);
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+.pics {
+  display: flex;
+  align-self: center;
+  position: relative;
+}
+
+.img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.active {
+  border: 10px solid #ffffff;
+  filter: grayscale(100%);
+}
+
+img.someone {
+  opacity: 0.6;
+}
+
+img.author {
+  z-index: 3;
+  margin: 0 -5rem;
+}
+
+img.bat {
+  opacity: 0.6;
+}
+
+.description {
+  text-align: center;
+  align-self: center;
+  justify-self: flex-end;
+  position: relative;
+}
+
+p {
+  color: var(--text-thin-color);
+}
+
+p strong {
+  color: var(--text-bold-color);
+}
+
+.btn {
+  align-self: center;
+  width: 60%;
+  padding: 20px 50px;
+  color: var(--background-card-color);
+  background-color: var(--button-color);
+  font-size: 16px;
+  border: none;
+  border-radius: 100px;
+  box-shadow: 3px 3px 0 var(--button-shadow);
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: 2px 2px 0 var(--button-shadow);
+  transform: translate(1px, 1px);
+  transition: all 0.5s;
+}
