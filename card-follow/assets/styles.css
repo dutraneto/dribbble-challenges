@@ -113,7 +113,8 @@ img.someone {
 
 img.author {
   z-index: 3;
-  margin: 0 -5rem;
+  margin: 0 -7rem;
+  transform: scale(1.2);
 }
 
 img.bat {
